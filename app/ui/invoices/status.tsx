@@ -17,13 +17,12 @@ export default function InvoiceStatus({ status }: { status: string }) {
           Pending
           <ClockIcon className="ml-1 w-4 text-gray-500" />
         </>
-      ) : null}
-      {status === 'paid' ? (
+      ) : status === 'paid' && (
         <>
           Paid
           <CheckIcon className="ml-1 w-4 text-white" />
         </>
-      ) : null}
+      )}
     </span>
   );
 }
